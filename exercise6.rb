@@ -1,13 +1,12 @@
 grocery_list = ["quinoa", "brocoli", "salmon", "almonds"]	
 
-def current_list(groceries)	
-	puts "Your current grocery list is:" 
-	
+def current_list(groceries)	 
 	groceries.each do |item|
 		puts "* #{item}"		
 	end
 end
 
+puts "Your current grocery list is:"
 current_list(grocery_list)
 
 puts "There are #{grocery_list.length} items on this list"
@@ -26,4 +25,5 @@ grocery_list << gets.chomp
 puts "Btw, salmon sucks, let's delete that"
 grocery_list.delete("salmon")
 
-puts "Your new, alphabetized list, without salmon, is #{current_list(grocery_list).sort}"
+puts "Your new, alphabetized list, without salmon, is"
+current_list(grocery_list.sort)
